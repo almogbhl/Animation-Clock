@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+html {
+    background: url(http://unsplash.it/1500/1000?image=881&blur=50);
+    background-position: top center;
+    background-size: cover;
+    text-align: center;
+    font-size: 10px;
+    font-family: 'helvetica neue';
+}
+
+body {
+    font-size: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    width: 40rem;
+    height: 40rem;
+    border: 2rem solid white;
+    border-radius: 50%;
+    position: relative;
+    padding: 2rem;
+}
+
+.clock-face {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.hand {
+    width: 4px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: top;
+    transform: rotate(180deg);
+    /* transition: all 0.05s; */
+    z-index: 1;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hour-hand {
+    height: 100px;
+}
+
+.minute-hand {
+    height: 150px;
+}
+
+.hour-hand::before {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: red; 
+    position: absolute;
+    top: -11px;
+    left: -10px;
+    content: "";
+}
+
+.btn {
+    width: 150px;
+    height: 100%;
+    margin-left: 100px;
+    border-radius: 10px;
+    font-size: 2rem;
+    color: white;
+    padding: 10px;
+    border-color: transparent;
+    background-color: tomato;
+}
